@@ -8,7 +8,7 @@
 	version = "v0.0.1";
 	buildInputs = [raylib];
 
-	src = "./src";
+	src = ./src;
 
 	buildPhase = ''
 		ls -al
