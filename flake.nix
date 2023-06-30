@@ -6,6 +6,7 @@
 			url = github:nixos/nixpkgs/nixos-23.05;
 		};
 	};
+
 	outputs = {
 		self,
 		nixpkgs,
@@ -13,7 +14,7 @@
 		system = "x86_64-linux";
 		pkgs = import nixpkgs { inherit system;};
 	in {
-		packages.${system}.callPackage ./. {};
+		myPackage = pkgs.callPackage ./. {};
 		default = self.packages.${system}.myPackage;
 	};
 }
