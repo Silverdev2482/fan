@@ -1,21 +1,20 @@
 {
 	stdenv,
-	raylib,
 	...
 }: stdenv.mkDerivation {
-	pname = "myPackage";
+	pname = "fan";
 	version = "v0.0.1";
-	buildInputs = [raylib];
+	buildInputs = [ ];
 
 	src = ./src;
 
 	buildPhase = ''
-		gcc main.c -o main
+
 	'';
 
 	installPhase = ''
 		mkdir -p $out/bin
-		mv main $out/bin/myPackage
+		mv $src/fan $out/bin/fan
 	'';
 
 }

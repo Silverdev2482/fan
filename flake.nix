@@ -1,5 +1,5 @@
 {
-	description = "Example C package";
+	description = "Extreamly basic shell script/wrapper to set the fan to max speed via sysfs and practice making packages";
 
 	inputs = {
 		nixpkgs = {
@@ -15,8 +15,8 @@
 		pkgs = import nixpkgs { inherit system;};
 	in {
 		packages.${system} = {
-			myPackage = pkgs.callPackage ./. {};
-			default = self.packages.${system}.myPackage;
+			fan = pkgs.callPackage ./. {};
+			default = self.packages.${system}.fan;
 		};
 	};
 }
