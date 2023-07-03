@@ -14,7 +14,7 @@
 
 	installPhase = ''
 		mkdir -p $out/bin
-		mv $src/fan $out/bin/fan
+		cp $src/fan $out/bin/fan
 	'';
 
 }
